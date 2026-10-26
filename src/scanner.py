@@ -41,3 +41,27 @@ def scan_port(target, port, timeout=0.5):
     except OSError:
         return False
 
+"""
+Scans a range of TCP ports on a target host.
+
+Args:
+    target (str): IP address of the target host.
+    start_port (int): First port to scan.
+    end_port (int): Last port to scan.
+    timeout (float): Connection timeout in seconds.
+
+Returns:
+    list: A list of open TCP port numbers.
+"""
+def scan_ports(target, start_port, end_port, timeout=0.5):
+    open_ports = []
+
+    # Iterate through the specified port range
+    for port in range(start_port, end_port + 1):
+
+        # Check whether the current port is open
+        if scan_port(target, port, timeout):
+            open_ports.append(port)
+
+    return open_ports
+
