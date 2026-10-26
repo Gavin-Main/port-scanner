@@ -1,0 +1,38 @@
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python Cache Files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Python Testing and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and Editor Settings
+.vscode/
+.idea/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment Variables and Secrets
+.env
+.env.*
+!.env.example
+
+# Generated Scan Reports
+reports/*
+!reports/.gitkeep
+
+# Temporary and Log Files
+*.log
+*.tmp
+*.bak
